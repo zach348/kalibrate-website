@@ -30,6 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
+    // Video sound toggle
+    const soundBtn = document.querySelector('.video-sound-btn');
+    const video = document.querySelector('.hero-video');
+    if (soundBtn && video) {
+        soundBtn.addEventListener('click', function() {
+            video.muted = !video.muted;
+            soundBtn.textContent = video.muted ? '🔇' : '🔊';
+        });
+    }
+
     // Observe feature cards
     const features = document.querySelectorAll('.feature');
     features.forEach((feature, index) => {
