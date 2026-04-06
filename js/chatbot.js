@@ -96,11 +96,26 @@
 
   // --- Message Handling ---
 
+  function renderMarkdown(text) {
+    // Simple markdown: bold, italic, headers, links — no raw HTML injection
+    return text
+      .replace(/^### (.+)$/gm, '<strong>$1</strong>')
+      .replace(/^## (.+)$/gm, '<strong>$1</strong>')
+      .replace(/^# (.+)$/gm, '<strong>$1</strong>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/\n/g, '<br>');
+  }
+
   function addMessage(role, content) {
     const messagesEl = document.getElementById("kb-chat-messages");
     const bubble = document.createElement("div");
     bubble.className = `kb-chat-bubble kb-chat-${role}`;
-    bubble.textContent = content;
+    if (role === "assistant") {
+      bubble.innerHTML = renderMarkdown(content);
+    } else {
+      bubble.textContent = content;
+    }
     messagesEl.appendChild(bubble);
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
