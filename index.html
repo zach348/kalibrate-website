@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Meditation | Kalibrate</title>
+    <title>Kalibrate — Arousal Regulation Through Structured Attention</title>
     <meta name="description"
-        content="An interactive, incremental approach to cultivating focus and a calmer mind. Available for iOS.">
+        content="A phased iOS intervention that uses adaptive attention tasks to guide users from activation to interoceptive regulation. A research-oriented approach to down-regulation.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chatbot.css">
     <script src="js/main.js"></script>
@@ -27,6 +27,7 @@
             <a href="/" class="logo">Kalibrate</a>
             <ul class="nav-links">
                 <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#design">Design</a></li>
                 <li><a href="privacy-policy.html">Privacy</a></li>
                 <li><a href="terms-of-use.html">Terms</a></li>
             </ul>
@@ -36,14 +37,15 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Calm Down and Focus</h1>
-                <p class="subtitle">An interactive, incremental approach to cultivating focus and a calmer mind. One
-                    step at a time.</p>
+                <h1>A phased descent from activation to interoceptive calm.</h1>
+                <p class="subtitle">You can't breathe your way out of a high-arousal state. Kalibrate walks you down
+                    first — using adaptive attention tasks to guide the transition from sympathetic engagement to
+                    regulated interoceptive focus.</p>
 
                 <div class="cta-buttons">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNAhvGWcJ5w_ZkRnfmBQwcQlSA0l8Zf64IccUnD5kCKtY3tA/viewform?usp=dialog"
-                        class="btn btn-primary" target="_blank" rel="noopener">Get Early Access</a>
-                    <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+                        class="btn btn-primary" target="_blank" rel="noopener">Join the Beta</a>
+                    <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
                 </div>
 
                 <div class="hero-video-container">
@@ -59,62 +61,121 @@
         <section id="how-it-works" class="how-it-works">
             <div class="section-content">
                 <h2 class="section-title">How It Works</h2>
-                <p
-                    style="text-align: center; font-size: 1.125rem; color: var(--gray); max-width: 700px; margin: 0 auto;">
-                    Kalibrate guides you through a structured session designed to capture your attention, engage your
-                    focus, and help you wind down naturally.</p>
+                <p class="section-lede">
+                    Every session is a structured trajectory from activation to regulated calm. The curve is
+                    personalized by pre-session self-report; difficulty within each phase is adapted in real time based
+                    on performance.
+                </p>
 
-                <div class="features-grid">
+                <div class="phases">
+                    <div class="phase">
+                        <img src="images/identification.png" alt="Phase 1 — exogenous attention capture"
+                            class="phase-image">
+                        <div class="phase-label">Phase 1</div>
+                        <h3>Capture</h3>
+                        <p class="phase-params">High perceptual load. Low cognitive load. Fully interactive.</p>
+                        <p>
+                            The session opens where the user is — often activated, distracted, or ruminating. A
+                            multi-object tracking task recruits exogenous attention: synchronized visual, haptic, and
+                            auditory pulses bind focus to the screen, interrupting internal loops that amplify arousal.
+                        </p>
+                        <p>
+                            The goal isn't calm yet. It's <em>contact</em> — bringing attention out of internal
+                            narrative and onto a present, moving target.
+                        </p>
+                    </div>
+
+                    <div class="phase">
+                        <img src="images/vha.png" alt="Phase 2 — graded cognitive transition" class="phase-image">
+                        <div class="phase-label">Phase 2</div>
+                        <h3>Transition</h3>
+                        <p class="phase-params">Decreasing perceptual load. Increasing cognitive load. Decreasing
+                            interactivity.</p>
+                        <p>
+                            As the user stabilizes, the task shifts. Sensory pulses slow. Interactivity decreases.
+                            Cognitive demand rises, moving processing from reactive/exteroceptive toward
+                            effortful/endogenous. Difficulty is adjusted in real time from multiple performance signals
+                            — task success, accuracy, reaction time, response duration, and tap precision — to hold the
+                            user in a target challenge zone within the phase.
+                        </p>
+                        <p>
+                            This is the bridge: the nervous system is gradually released from sensory capture without
+                            collapsing into disengagement.
+                        </p>
+                    </div>
+
+                    <div class="phase">
+                        <img src="images/breathing.png" alt="Phase 3 — interoceptive regulation" class="phase-image">
+                        <div class="phase-label">Phase 3</div>
+                        <h3>Interoception</h3>
+                        <p class="phase-params">Low perceptual load. Cognitive shift to interoceptive awareness.
+                            Non-interactive.</p>
+                        <p>
+                            The final phase lands in guided breathing and interoceptive focus. With the high-arousal
+                            state already walked down, the user now has the regulatory bandwidth to engage with
+                            internal state — slow-paced respiration, attention to the breath, and sustained awareness
+                            of somatic signal.
+                        </p>
+                        <p>
+                            Slow-paced breathing near resonance frequency (~6 breaths per minute) has an established
+                            literature around vagal tone and autonomic balance. Kalibrate's contribution is the
+                            scaffolding that makes a user <em>able</em> to engage with it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="design" class="design">
+            <div class="section-content">
+                <h2 class="section-title">Design Elements</h2>
+
+                <div class="features-grid design-grid">
                     <div class="feature">
-                        <img src="images/ema.png" alt="Check-in Assessment" class="feature-image">
-                        <h3>1. Check In</h3>
-                        <p>Begin with a brief assessment of your current stress and energy levels to personalize the
-                            session.</p>
+                        <img src="images/ema.png" alt="Pre-session self-report" class="feature-image">
+                        <h3>Pre-Session EMA</h3>
+                        <p>A brief ecological momentary assessment before each session personalizes the arousal
+                            trajectory to the user's current state.</p>
                     </div>
 
                     <div class="feature">
-                        <img src="images/identification.png" alt="Focus Training Game" class="feature-image">
-                        <h3>2. Focus Training</h3>
-                        <p>Track moving targets in an adaptive game that loads working memory and pulls attention away
-                            from rumination.</p>
+                        <img src="images/title.png" alt="Adaptive difficulty" class="feature-image">
+                        <h3>Adaptive Difficulty</h3>
+                        <p>Within-phase difficulty is modulated in real time — discriminatory load, ball speed, response
+                            windows, and target count — to keep challenge calibrated without breaking the arousal
+                            curve.</p>
                     </div>
 
                     <div class="feature">
-                        <img src="images/vha.png" alt="VHA Stimulation" class="feature-image">
-                        <h3>3. Rhythmic Guidance</h3>
-                        <p>Coordinated visual, haptic, and audio pulses help capture your focus and gradually slow your
-                            nervous system.</p>
+                        <img src="images/progress.png" alt="Post-session assessment" class="feature-image">
+                        <h3>Post-Session Assessment</h3>
+                        <p>A matched self-report captures state change across the session and feeds longitudinal
+                            tracking.</p>
                     </div>
+                </div>
 
-                    <div class="feature">
-                        <img src="images/breathing.png" alt="Breathing Exercise" class="feature-image">
-                        <h3>4. Guided Breathing</h3>
-                        <p>Research-backed breathing exercises shift your state from alert focus to calm regulation.</p>
-                    </div>
-
-                    <div class="feature">
-                        <img src="images/progress.png" alt="Session Results" class="feature-image">
-                        <h3>5. Track Progress</h3>
-                        <p>Review your session results and see how your focus and calm improve over time with consistent
-                            practice.</p>
-                    </div>
-
-                    <div class="feature">
-                        <img src="images/title.png" alt="Personalized Experience" class="feature-image">
-                        <h3>6. Adaptive Experience</h3>
-                        <p>Each session adapts to your current state and performance, keeping you in the optimal zone
-                            between boredom and anxiety.</p>
-                    </div>
+                <div class="profiles-note">
+                    <h3>Session Profiles</h3>
+                    <p>
+                        The currently exposed user-facing protocol is a graded down-regulation trajectory. Additional
+                        profiles — fluctuating, challenge, variable, and manual — are implemented at the engine level
+                        and are candidates for future study.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="beta">
             <div class="section-content">
-                <h2>Currently in Beta for iOS</h2>
-                <p>Discover a new approach to mindfulness and focus training.</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNAhvGWcJ5w_ZkRnfmBQwcQlSA0l8Zf64IccUnD5kCKtY3tA/viewform?usp=dialog"
-                    class="btn btn-primary" target="_blank" rel="noopener">Get Early Access</a>
+                <h2>Currently in Closed Beta for iOS</h2>
+                <p>Kalibrate is an independent research-oriented project developed by Training State, LLC. We're
+                    opening beta access to clinicians, researchers, and individuals interested in the approach.</p>
+                <div class="cta-buttons cta-centered">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNAhvGWcJ5w_ZkRnfmBQwcQlSA0l8Zf64IccUnD5kCKtY3tA/viewform?usp=dialog"
+                        class="btn btn-primary" target="_blank" rel="noopener">Join the Beta</a>
+                    <a href="mailto:zachary@kalibrate.me?subject=Research%20inquiry" class="btn btn-secondary">For
+                        Researchers</a>
+                </div>
             </div>
         </section>
     </main>
